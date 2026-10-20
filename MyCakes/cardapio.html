@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Configurações da página e arquivos responsáveis pelo visual. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCakes - Cardápio</title>
+    <link rel="stylesheet" href="estilo/var.css">
+    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="estilo/cardapio.css">
+    <link rel="stylesheet" href="estilo/responsividade.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chewy&family=DynaPuff:wght@400..700&family=Slackey&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="imagens/mycakes-ico.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Cabeçalho igual ao da página inicial, para a navegação ficar consistente. -->
+    <div class="header-container">
+        <header>
+            <h1>My<span>Cakes</span></h1>
+        </header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="#social">Redes Sociais</a>
+        </nav>
+    </div>
+
+    <!-- Botão que abre o carrinho; o número é atualizado pelo JavaScript. -->
+    <div class="btn-carrinho" title="Abrir Carrinho">
+        🛒
+        <span id="contador-carrinho" class="contador-carrinho">0</span>
+    </div>
+
+    <!-- Parte principal: aqui ficam todos os produtos que podem ser adicionados. -->
+    <main class="cardapio-main">
+        <section class="produtos">
+            <div class="container">
+                <!-- Primeira categoria. Cada botão leva id, nome e preço para o JavaScript. -->
+                <div class="titulo-secao-cardapio">
+                    <h2>🍰 Bolos de Pote</h2>
+                    <p>Feitos com carinho, fresquinhos todos os dias.</p>
+                </div>
+
+                <div class="bolos grid-produtos">
+                    <div class="card card-destaque">
+                        <div class="tag-destaque">🔥 Mais vendido</div>
+                        <div class="img-wrapper">
+                            <img src="imagens/bolo-chocolate-maracuja-p.png"
+                                alt="Foto de bolo de chocolate para cardapio">
+                        </div>
+                        <h3>Bolo Sabor <span class="choco">Chocolate</span></h3>
+                        <p class="desc-produto">Massa de chocolate fofinha com recheio cremoso.</p>
+                        <div class="preco">Por apenas: <span class="destaque-preco">R$ 10,00</span></div>
+                        <div class="btn">
+                            <button class="btn-adicionar" data-id="1" data-nome="Bolo de Chocolate"
+                                data-preco="10.00">Adicionar</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="imagens/bolo-ninho-p.png" alt="Foto de bolo de ninho para cardapio">
+                        </div>
+                        <h3>Bolo Sabor <span class="inho">Ninho</span></h3>
+                        <p class="desc-produto">Massa branca com creme suave de Leite Ninho.</p>
+                        <div class="preco">Por apenas: <span class="destaque-preco">R$ 10,00</span></div>
+                        <div class="btn">
+                            <button class="btn-adicionar" data-id="2" data-nome="Bolo de Ninho"
+                                data-preco="10.00">Adicionar</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="imagens/bolo-morango-p.png" alt="Foto de bolo de morango para cardapio">
+                        </div>
+                        <h3>Bolo Sabor <span class="orango">Morango</span></h3>
+                        <p class="desc-produto">Creme leve e fofinho com pedaços de morango.</p>
+                        <div class="preco">Por apenas: <span class="destaque-preco">R$ 10,00</span></div>
+                        <div class="btn">
+                            <button class="btn-adicionar" data-id="3" data-nome="Bolo de Morango"
+                                data-preco="10.00">Adicionar</button>
+                        </div>
+                    </div>
+
+                    <div class="card card-destaque">
+                        <div class="tag-destaque">🔥 Mais vendido</div>
+                        <div class="img-wrapper">
+                            <img src="imagens/bolo-prestigio-p.png" alt="Foto de bolo de prestígio para cardapio">
+                        </div>
+                        <h3>Bolo Sabor <span class="tigio">Prestígio</span></h3>
+                        <p class="desc-produto">O clássico coco ralado com calda de chocolate.</p>
+                        <div class="preco">Por apenas: <span class="destaque-preco">R$ 10,00</span></div>
+                        <div class="btn">
+                            <button class="btn-adicionar" data-id="4" data-nome="Bolo de Prestígio"
+                                data-preco="10.00">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Segunda categoria: bebidas. -->
+                <div class="titulo-secao-cardapio">
+                    <h2>🥤 Bebidas Geladas</h2>
+                    <p>Acompanhamentos ideais para o seu doce.</p>
+                </div>
+
+                <div class="bebidas grid-produtos">
+                    <div class="card">
+                        <div class="img-wrapper-bebida">
+                            <img src="imagens/foto-cocacola-p.png" class="img-bebida"
+                                alt="Garrafinha Pitchulinha de Coca-Cola">
+                        </div>
+                        <h3>Pitchulinha Coca-Cola 250ml</h3>
+                        <div class="preco">Por apenas: <span class="destaque-preco">R$ 3,50</span></div>
+                        <div class="btn">
+                            <button class="btn-adicionar" data-id="5" data-nome="Pitchulinha Coca-Cola"
+                                data-preco="3.50">Adicionar</button>
+                        </div>
+                    </div>
+
+                    <div class="card card-destaque">
+                        <div class="tag-destaque">🔥 Mais vendido</div>
+                        <div class="img-wrapper-bebida">
+                            <img src="imagens/foto-guarana-p.png" class="img-bebida"
+                                alt="Garrafinha Pitchulinha de Guaraná Antarctica">
+                        </div>
+                        <h3>Pitchulinha Guaraná 250ml</h3>
+                        <div class="preco">Por apenas: <span class="destaque-preco">R$ 3,50</span></div>
+                        <div class="btn">
+                            <button class="btn-adicionar" data-id="6" data-nome="Pitchulinha Guaraná"
+                                data-preco="3.50">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Terceira categoria: combos promocionais. -->
+                <div class="titulo-secao-cardapio">
+                    <h2>🎁 Combos Promocionais</h2>
+                    <p>Economize combinando suas delícias favoritas!</p>
+                </div>
+
+                <div class="combos grid-produtos">
+                    <div class="card combo-card">
+                        <div class="img-wrapper-combo">
+                            <img src="imagens/combo-1.png.png" class="combo-placeholder" class="img-combo">
+                        </div>
+                        <h3>Combo Família</h3>
+                        <p class="desc-produto">2 Bolos de pote à sua escolha + 1 Bebida gelada.</p>
+                        <div class="preco">Por apenas: <span class="destaque-preco">R$ 20,00</span></div>
+                        <div class="btn">
+                            <button class="btn-adicionar" data-id="7" data-nome="Combo 1"
+                                data-preco="20.00">Adicionar</button>
+                        </div>
+                    </div>
+
+                    <div class="card combo-card">
+                        <div class="img-wrapper-combo">
+                            <img src="imagens/combo-2.png" class="combo-placeholder" class="img-combo"
+                                alt="Foto de dois bolos de pote deliciosos">
+                        </div>
+                        <h3>Combo Dupla</h3>
+                        <p class="desc-produto">2 Bolos de pote deliciosos por um preço especial.</p>
+                        <div class="preco">Por apenas: <span class="destaque-preco">R$ 15,00</span></div>
+                        <div class="btn">
+                            <button class="btn-adicionar" data-id="8" data-nome="Combo 2"
+                                data-preco="15.00">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fundo escuro e gaveta lateral usados quando o carrinho está aberto. -->
+            <div class="overlay"></div>
+            <div class="carrinho">
+                <div class="carrinho-header">
+                    <h2>Seu Carrinho</h2>
+                    <span class="fechar">Fechar ✖</span>
+                </div>
+
+                <div class="itens-carrinho">
+                    <p class="carrinho-vazio">Seu carrinho está vazio.</p>
+                </div>
+
+                <div class="total-carrinho">
+                    <h3>Total: <span id="valor-total">R$ 0,00</span></h3>
+                </div>
+
+                <!-- Dados simples usados para montar o pedido e o QR Code. -->
+                <form id="form-checkout">
+                    <div class="campo-form">
+                        <label for="cliente-nome">Nome Completo:</label>
+                        <input type="text" id="cliente-nome" required placeholder="Digite seu nome">
+                    </div>
+                    <div class="campo-form">
+                        <label for="cliente-turma">Turma / Sala:</label>
+                        <input type="text" id="cliente-turma" required placeholder="Ex: 3º Ano A">
+                    </div>
+                    <div class="campo-form">
+                        <label for="cliente-turno">Turno:</label>
+                        <select id="cliente-turno" required>
+                            <option value="" disabled selected>Selecione seu turno</option>
+                            <option value="Manhã">Manhã</option>
+                            <option value="Tarde">Tarde</option>
+                            <option value="Noite">Noite</option>
+                        </select>
+                    </div>
+                    <div class="campo-form">
+                        <label for="cliente-pagamento">Forma de Pagamento (No dia):</label>
+                        <select id="cliente-pagamento" required>
+                            <option value="Dinheiro">Dinheiro</option>
+                            <option value="Pix">Pix</option>
+                        </select>
+                    </div>
+                    <div class="campo-form">
+                        <label for="cliente-obs">Observações (Opcional):</label>
+                        <textarea id="cliente-obs" rows="3" placeholder="Alguma restrição ou detalhe?"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-finalizar">Confirmar e Gerar QR Code 🚀</button>
+                </form>
+
+                <!-- Só aparece depois que a pessoa confirma o pedido. -->
+                <div id="modal-qrcode" style="display: none;">
+                    <h3>Pedido Confirmado! 🎉</h3>
+                    <p>Tire um print do QR Code abaixo para apresentar no dia e envie o pedido ao nosso WhatsApp:</p>
+                    <div id="qrcode-container"></div>
+                    <button type="button" id="btn-whatsapp" class="btn-whatsapp">Enviar para o WhatsApp 💬</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé com as mesmas informações da página inicial. -->
+    <footer>
+        <section class="org-rodape">
+            <div class="mycakes-rodape">
+                <h1>My<span>Cakes</span></h1>
+                <h2>Pequenos potes. <br> <span>Grandes momentos.</span></h2>
+            </div>
+            <div class="social" id="social">
+                <h2>Redes Sociais</h2>
+                <a href="https://www.instagram.com/mycakes.social/" target="_blank">
+                    <img src="imagens/instagram_logo_white.png" alt="Instagram">
+                </a>
+                <a href="https://wa.me/557988891359" target="_blank">
+                    <img src="imagens/whatsapp_logo_white-removebg-preview.png" alt="">
+                </a>
+            </div>
+            <div class="links">
+                <h2>Links</h2>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="cardapio.html">Cardápio</a></p>
+            </div>
+            <div class="contato">
+                <h2>Contato</h2>
+                <p>mycakes.social@gmail.com</p>
+                <p>+55 79 00000 0000</p>
+                <p>Aracaju, SE</p>
+            </div>
+        </section>
+        <div class="credits">
+            <p>&copy; MyCakes. Todos os direitos reservados</p>
+            <p>Site desenvolvido por <strong>Luis Gustavo</strong> e <strong>Miguel Vieira</strong> para o
+                <strong>MyCakes</strong></p>
+        </div>
+    </footer>
+
+    <!-- Biblioteca pronta para desenhar o QR Code e código do carrinho. -->
+    <script src="script/qrcode.min.js"></script>
+    <script src="script/cardapio.js" defer></script>
+</body>
+</html>
